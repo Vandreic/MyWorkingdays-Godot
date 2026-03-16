@@ -5,7 +5,7 @@
 <h1 align="center">My Workingdays</h1>
 
 <p align="center">
-  <a href="https://github.com/Vandreic/my-workdays-godot/releases">
+  <a href="https://github.com/Vandreic/MyWorkingdays-Godot/releases">
     <img src="https://img.shields.io/badge/release-v1.0.0-00BB1A.svg?style=plastic" alt="Release version" />
   </a>
   <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">
@@ -95,8 +95,8 @@ You can install My Workingdays by using [Obtainium](https://github.com/ImranR98/
 
 1. [Download](https://github.com/ImranR98/Obtainium/releases/latest) and install Obtainium.
 2. Open Obtainium and tap `Add App` from the bottom tab bar.
-3. Enter `my-workdays-godot` in the search field, tap `Search`, select `GitHub` as the source, and then tap `Select 1`.
-4. Choose `Vandreic/my-workdays-godot` from the results and tap `Pick`.
+3. Enter `MyWorkingdays-Godot` in the search field, tap `Search`, select `GitHub` as the source, and then tap `Select 1`.
+4. Choose `Vandreic/MyWorkingdays-Godot` from the results and tap `Pick`.
 5. At the top of the screen, next to the GitHub URL, tap the `Add` button to confirm.
 6. At the bottom bar, tap `Install` to begin the installation.
 
@@ -107,9 +107,9 @@ When new updates are released, My Workingdays can be updated via Obtainium.
 
 1. Open Obtainium.
 2. To update My Workingdays:
-   * Tap the "update icon" (phone with downward arrow) next to `my-workdays-godot by Vandreic`.
+   * Tap the "update icon" (phone with downward arrow) next to `MyWorkingdays-Godot by Vandreic`.
    <br>***or***<br>
-   - Select `my-workdays-godot` from the app list and tap `Update` from the bottom bar.
+   - Select `MyWorkingdays-Godot` from the app list and tap `Update` from the bottom bar.
 
 **Note:** Obtainium supports automatic updates, allowing apps to be updated seamlessly in the background. This feature is enabled by default and ensures that My Workingdays stays up-to-date. For more details, visit the [Obtainium wiki](https://github.com/ImranR98/Obtainium/wiki#background-updates).
 
@@ -119,13 +119,13 @@ When new updates are released, My Workingdays can be updated via Obtainium.
 <details>
 <summary>Manual Installation</summary>
 
-1. [Download](https://github.com/Vandreic/my-workdays-godot/releases/latest) the latest release.
+1. [Download](https://github.com/Vandreic/MyWorkingdays-Godot/releases/latest) the latest release.
 2. Install the app and run.
 
 <details>
 <summary>Manual Update</summary>
 
-When new updates are released, you need to manually [download](https://github.com/Vandreic/my-workdays-godot/releases/latest) the latest release and install it over the existing installation. 
+When new updates are released, you need to manually [download](https://github.com/Vandreic/MyWorkingdays-Godot/releases/latest) the latest release and install it over the existing installation. 
 <br><br>
 **Note:** If My Workingdays is installed via Obtainium, updates can be downloaded and installed automatically.
 
@@ -137,7 +137,7 @@ When new updates are released, you need to manually [download](https://github.co
 <details>
 <summary>Windows</summary>
 
-1. [Download](https://github.com/Vandreic/my-workdays-godot/releases/latest) the latest release.
+1. [Download](https://github.com/Vandreic/MyWorkingdays-Godot/releases/latest) the latest release.
 2. Run the executable.
 
 </details>
