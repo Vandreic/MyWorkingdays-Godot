@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://b0ufo001xmkb0"]
+
+[ext_resource type="PackedScene" uid="uid://cae2j4owaaexq" path="res://templates/base_screen_template/base_screen_template.tscn" id="1_drjtv"]
+[ext_resource type="Script" uid="uid://c5dtffvdijv05" path="res://screens/name_entry/name_entry_screen_manager.gd" id="2_smdlk"]
+
+[node name="NameEntryScreen" unique_id=834491522 instance=ExtResource("1_drjtv")]
+script = ExtResource("2_smdlk")
+
+[node name="TitleLabel" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="0" unique_id=246013616]
+unique_name_in_owner = true
+text = "What is your name?"
+
+[node name="NameInputContainer" type="HBoxContainer" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="1" unique_id=1976735604]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.4
+anchor_right = 1.0
+anchor_bottom = 0.45
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="NamePromptLabel" type="Label" parent="BackgroundPanel/UIContainer/NameInputContainer" index="0" unique_id=99586318]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label"
+text = "My name is: "
+
+[node name="NameInput" type="LineEdit" parent="BackgroundPanel/UIContainer/NameInputContainer" index="1" unique_id=663002406]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_type_variation = &"UI_LineTextInput"
+clear_button_enabled = true
+caret_blink = true
+
+[node name="ContinueButton" type="Button" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="2" unique_id=187158794]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.875
+anchor_right = 0.7
+anchor_bottom = 0.96
+offset_left = -8.640015
+offset_top = 8.774963
+offset_right = -8.639984
+offset_bottom = 8.774963
+theme_type_variation = &"UI_FilledButton"
+text = "Continue"
+
+[node name="NavigationBarContainer" parent="." index="1" unique_id=295877241]
+visible = false

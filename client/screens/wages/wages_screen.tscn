@@ -1,0 +1,405 @@
+[gd_scene format=3 uid="uid://cx2yw8k5qm7bj"]
+
+[ext_resource type="PackedScene" uid="uid://cae2j4owaaexq" path="res://templates/base_screen_template/base_screen_template.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://bkt46c65wbepn" path="res://screens/wages/wages_screen_manager.gd" id="2_script"]
+[ext_resource type="Texture2D" uid="uid://dt3aikah78igf" path="res://assets/icons/home.svg" id="3_home"]
+[ext_resource type="Texture2D" uid="uid://7ndwsvonnbje" path="res://assets/icons/payments.svg" id="4_0615a"]
+[ext_resource type="Texture2D" uid="uid://ccta4vu3kwduh" path="res://assets/icons/analytics.svg" id="5_analytics"]
+[ext_resource type="Script" uid="uid://b4u7csxl3v57n" path="res://utilities/scroll_container_passthrough.gd" id="6_scroll"]
+
+[node name="WagesScreen" unique_id=834491522 instance=ExtResource("1_base")]
+script = ExtResource("2_script")
+
+[node name="TitleLabel" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="0" unique_id=246013616]
+unique_name_in_owner = true
+text = "Wages"
+
+[node name="WagesScrollContainer" type="ScrollContainer" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="1" unique_id=165781102]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.18
+anchor_right = 1.0
+anchor_bottom = 0.92
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+script = ExtResource("6_scroll")
+
+[node name="FieldsContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer" index="0" unique_id=165781103]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="HourlyWageContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer" index="0" unique_id=1434266710]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="HourlyWageLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/HourlyWageContainer" index="0" unique_id=1006003783]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "Hourly wage:"
+horizontal_alignment = 1
+
+[node name="HourlyWageInput" type="LineEdit" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/HourlyWageContainer" index="1" unique_id=1952830136]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_LineTextInput"
+placeholder_text = "0"
+max_length = 16
+
+[node name="TaxPercentageContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer" index="1" unique_id=1956968138]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="TaxPercentageLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/TaxPercentageContainer" index="0" unique_id=1765191468]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "Tax (%):"
+horizontal_alignment = 1
+
+[node name="TaxPercentageInput" type="LineEdit" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/TaxPercentageContainer" index="1" unique_id=784027696]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_LineTextInput"
+placeholder_text = "0"
+max_length = 6
+
+[node name="PersonalAllowanceContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer" index="2" unique_id=557878704]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="PersonalAllowanceLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/PersonalAllowanceContainer" index="0" unique_id=2067623768]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "Personal allowance (fradrag):"
+horizontal_alignment = 1
+
+[node name="PersonalAllowanceInput" type="LineEdit" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/PersonalAllowanceContainer" index="1" unique_id=207541915]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_LineTextInput"
+placeholder_text = "0"
+max_length = 16
+
+[node name="EveningSupplementContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer" index="3" unique_id=246013630]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="EveningWageLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/EveningSupplementContainer" index="0" unique_id=246013631]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "Evening supplement (kr/h, optional):"
+horizontal_alignment = 1
+
+[node name="EveningWageInput" type="LineEdit" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/EveningSupplementContainer" index="1" unique_id=246013632]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_LineTextInput"
+placeholder_text = "0"
+max_length = 16
+
+[node name="EveningWindowRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/EveningSupplementContainer" index="2" unique_id=246013633]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="EveningWindowFromLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/EveningSupplementContainer/EveningWindowRow" index="0" unique_id=246013634]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label_Small"
+text = "From:"
+
+[node name="EveningStartButton" type="Button" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/EveningSupplementContainer/EveningWindowRow" index="1" unique_id=246013635]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme_type_variation = &"UI_FilledButton"
+text = "18:00"
+
+[node name="EveningWindowToLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/EveningSupplementContainer/EveningWindowRow" index="2" unique_id=246013636]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label_Small"
+text = "To:"
+
+[node name="EveningEndButton" type="Button" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/EveningSupplementContainer/EveningWindowRow" index="3" unique_id=246013637]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme_type_variation = &"UI_FilledButton"
+text = "22:00"
+
+[node name="NightSupplementContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer" index="4" unique_id=246013638]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="NightWageLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/NightSupplementContainer" index="0" unique_id=246013639]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "Night supplement (kr/h, optional):"
+horizontal_alignment = 1
+
+[node name="NightWageInput" type="LineEdit" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/NightSupplementContainer" index="1" unique_id=246013640]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_LineTextInput"
+placeholder_text = "0"
+max_length = 16
+
+[node name="NightWindowRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/NightSupplementContainer" index="2" unique_id=246013641]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="NightWindowFromLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/NightSupplementContainer/NightWindowRow" index="0" unique_id=246013642]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label_Small"
+text = "From:"
+
+[node name="NightStartButton" type="Button" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/NightSupplementContainer/NightWindowRow" index="1" unique_id=246013643]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme_type_variation = &"UI_FilledButton"
+text = "22:00"
+
+[node name="NightWindowToLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/NightSupplementContainer/NightWindowRow" index="2" unique_id=246013644]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label_Small"
+text = "To:"
+
+[node name="NightEndButton" type="Button" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/NightSupplementContainer/NightWindowRow" index="3" unique_id=246013645]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme_type_variation = &"UI_FilledButton"
+text = "06:00"
+
+[node name="SaturdaySupplementContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer" index="5" unique_id=246013646]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="SaturdayWageLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SaturdaySupplementContainer" index="0" unique_id=246013647]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "Lørdagstillæg (kr/h, valgfrit):"
+horizontal_alignment = 1
+
+[node name="SaturdayWageInput" type="LineEdit" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SaturdaySupplementContainer" index="1" unique_id=246013648]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_LineTextInput"
+placeholder_text = "0"
+max_length = 16
+
+[node name="SaturdayWindowRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SaturdaySupplementContainer" index="2" unique_id=246013649]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="SaturdayWindowFromLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SaturdaySupplementContainer/SaturdayWindowRow" index="0" unique_id=246013650]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label_Small"
+text = "From:"
+
+[node name="SaturdayStartButton" type="Button" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SaturdaySupplementContainer/SaturdayWindowRow" index="1" unique_id=246013651]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme_type_variation = &"UI_FilledButton"
+text = "00:00"
+
+[node name="SaturdayWindowToLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SaturdaySupplementContainer/SaturdayWindowRow" index="2" unique_id=246013652]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label_Small"
+text = "To:"
+
+[node name="SaturdayEndButton" type="Button" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SaturdaySupplementContainer/SaturdayWindowRow" index="3" unique_id=246013653]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme_type_variation = &"UI_FilledButton"
+text = "23:59"
+
+[node name="SundaySupplementContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer" index="6" unique_id=246013654]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="SundayWageLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SundaySupplementContainer" index="0" unique_id=246013655]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "Søndagstillæg (kr/h, valgfrit):"
+horizontal_alignment = 1
+
+[node name="SundayWageInput" type="LineEdit" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SundaySupplementContainer" index="1" unique_id=246013656]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_LineTextInput"
+placeholder_text = "0"
+max_length = 16
+
+[node name="SundayWindowRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SundaySupplementContainer" index="2" unique_id=246013657]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="SundayWindowFromLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SundaySupplementContainer/SundayWindowRow" index="0" unique_id=246013658]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label_Small"
+text = "From:"
+
+[node name="SundayStartButton" type="Button" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SundaySupplementContainer/SundayWindowRow" index="1" unique_id=246013659]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme_type_variation = &"UI_FilledButton"
+text = "00:00"
+
+[node name="SundayWindowToLabel" type="Label" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SundaySupplementContainer/SundayWindowRow" index="2" unique_id=246013660]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label_Small"
+text = "To:"
+
+[node name="SundayEndButton" type="Button" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer/SundaySupplementContainer/SundayWindowRow" index="3" unique_id=246013661]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme_type_variation = &"UI_FilledButton"
+text = "23:59"
+
+[node name="SaveButton" type="Button" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer" index="7" unique_id=1960995405]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_FilledButton"
+text = "Save"
+
+[node name="ScrollBottomSpacer" type="Control" parent="BackgroundPanel/UIContainer/WagesScrollContainer/FieldsContainer" index="8" unique_id=1960995406]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="HomeButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="0" unique_id=1519570673]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/HomeButton" index="0" unique_id=943090798]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/HomeButton/VBoxContainer" index="0" unique_id=1096847135]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_home")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/HomeButton/VBoxContainer" index="1" unique_id=129400146]
+layout_mode = 2
+text = "Home"
+horizontal_alignment = 1
+
+[node name="WagesButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="1" unique_id=1554121777]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/WagesButton" index="0" unique_id=1012086388]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/WagesButton/VBoxContainer" index="0" unique_id=291480176]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_0615a")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/WagesButton/VBoxContainer" index="1" unique_id=640264345]
+layout_mode = 2
+text = "Wages"
+horizontal_alignment = 1
+
+[node name="SalaryButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="2" unique_id=1477685166]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/SalaryButton" index="0" unique_id=249617085]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/SalaryButton/VBoxContainer" index="0" unique_id=267534233]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_analytics")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/SalaryButton/VBoxContainer" index="1" unique_id=1729323244]
+layout_mode = 2
+text = "Salary"
+horizontal_alignment = 1

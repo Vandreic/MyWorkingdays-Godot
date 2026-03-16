@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://d6vy800ecmp8"]
+
+[ext_resource type="PackedScene" uid="uid://n0hnyjxf3qvj" path="res://templates/base_popup_template/base_popup_template.tscn" id="1_jersu"]
+[ext_resource type="Script" uid="uid://dnvohg5cica6o" path="res://components/popups/time_picker/time_picker_popup.gd" id="2_ou5fe"]
+
+[node name="TimePickerPopup" unique_id=362013060 instance=ExtResource("1_jersu")]
+position = Vector2i(90, 300)
+size = Vector2i(540, 200)
+script = ExtResource("2_ou5fe")
+
+[node name="RootContainer" type="VBoxContainer" parent="BackgroundPanel/ContentContainer" parent_id_path=PackedInt32Array(1516561918) index="0" unique_id=1156719445]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TimeRowContainer" type="HBoxContainer" parent="BackgroundPanel/ContentContainer/RootContainer" index="0" unique_id=119482535]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="HourLabel" type="Label" parent="BackgroundPanel/ContentContainer/RootContainer/TimeRowContainer" index="0" unique_id=1932965616]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label"
+text = "Hour:"
+
+[node name="HourLineEdit" type="LineEdit" parent="BackgroundPanel/ContentContainer/RootContainer/TimeRowContainer" index="1" unique_id=285294806]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_LineTextInput"
+alignment = 1
+max_length = 2
+
+[node name="MinuteLabel" type="Label" parent="BackgroundPanel/ContentContainer/RootContainer/TimeRowContainer" index="2" unique_id=461815589]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label"
+text = "Minute:"
+
+[node name="MinuteLineEdit" type="LineEdit" parent="BackgroundPanel/ContentContainer/RootContainer/TimeRowContainer" index="3" unique_id=1153820669]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_LineTextInput"
+alignment = 1
+max_length = 2
+
+[node name="OKButton" type="Button" parent="BackgroundPanel/ContentContainer/RootContainer" index="1" unique_id=412243341]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(275, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_FilledButton"
+text = "OK"

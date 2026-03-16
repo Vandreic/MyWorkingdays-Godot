@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cae2j4owaaexq"]
+
+[ext_resource type="Script" uid="uid://dh20cp612rmv7" path="res://templates/base_screen_template/base_screen_template_manager.gd" id="1_y7gjl"]
+[ext_resource type="Theme" uid="uid://di2vbg26pjohw" path="res://assets/themes/light_theme.tres" id="2_ll6kw"]
+[ext_resource type="Texture2D" uid="uid://fe4icgv0yspo" path="res://assets/icons/settings.svg" id="3_settings"]
+
+[node name="BaseScreenTemplate" type="Node" unique_id=834491522]
+script = ExtResource("1_y7gjl")
+
+[node name="BackgroundPanel" type="Panel" parent="." unique_id=536046563]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ll6kw")
+theme_type_variation = &"UI_Surface"
+
+[node name="UIContainer" type="Control" parent="BackgroundPanel" unique_id=1692627922]
+layout_mode = 1
+anchor_left = 0.03
+anchor_top = 0.02
+anchor_right = 0.97
+anchor_bottom = 0.985
+
+[node name="SettingsButton" type="TextureButton" parent="BackgroundPanel/UIContainer" unique_id=1605320924]
+unique_name_in_owner = true
+modulate = Color(0.353, 0.396, 0.4, 1)
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -70.0
+offset_right = -10.0
+offset_bottom = 60.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_settings")
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="BackgroundPanel/UIContainer" unique_id=246013616]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.01
+anchor_right = 1.0
+anchor_bottom = 0.12
+theme_type_variation = &"UI_Title"
+text = "Scene Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NavigationBarContainer" type="Panel" parent="." unique_id=295877241]
+custom_minimum_size = Vector2(0, 90)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_type_variation = &"UI_NavBar"
+
+[node name="UIContainer" type="HBoxContainer" parent="NavigationBarContainer" unique_id=1459262737]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.05
+anchor_right = 0.97
+anchor_bottom = 0.95
+theme_override_constants/separation = 100
+alignment = 1

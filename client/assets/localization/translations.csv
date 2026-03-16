@@ -1,0 +1,148 @@
+key,en,da
+CHOOSE_LANGUAGE,Choose a language,Vælg et sprog
+LANGUAGE,English,Dansk
+LANGUAGE_ENGLISH,English,Engelsk
+LANGUAGE_DANISH,Danish,Dansk
+CONTINUE_BUTTON,Continue,Fortsæt
+APP_NAME,My Workdays,My Workdays
+WELCOME_TO_APP,"Welcome to
+{app_name}!","Velkommen til
+{app_name}!"
+CONNECT_BUTTON,Connect,Tilslut
+ACCESS_CODE,Access Code,Adgangskode
+ACCESS_CODE_PLACEHOLDER,Enter Access Code Here...,Skriv udleverede kode her...
+SERVER_STATUS_CHECKING,Checking Server Status...,Tjekker status på server...
+SERVER_STATUS_ONLINE,Server Status: Online,Server status: Online
+SERVER_STATUS_OFFLINE,Server status: Offline,Server status: Offline
+SERVER_STATUS_CONNECTION_TIMEOUT,Connection timed out.,Forbindelsen blev afbrudt.
+SERVER_INFO_CHECK_CONNECTION,Please check your connection and try again.,Tjek venligst din forbindelse og prøv igen.
+SERVER_STATUS_API_LIMIT_REACHED,API Call Limit Reached!,API-kaldsgræne nået!
+SERVER_INFO_API_LIMIT_REACHED,"You have reached the maximum number of allowed API calls.
+
+Try again in {time}.","Du har nået det maksimale antal tilladte API-kald for dette slutpunkt.
+
+Prøv igen om {time}."
+SERVER_STATUS_NO_INTERNET,No internet connection.,Ingen internetforbindelse.
+SERVER_INFO_NO_INTERNET,Please connect to the internet and try again.,Opret forbindelse til internettet og prøv igen.
+SERVER_INFO_OFFLINE,Server is temporarily offline. Please try again later.,Serveren er midlertidigt offline. Prøv igen senere.
+SERVER_STATUS_ERROR,An error occurred.,Der opstod en fejl.
+SERVER_INFO_ERROR,Server responded with code: {response_code},Serveren svarede med kode: {response_code}
+SERVER_STATUS_ACCESS_GRANTED,Access Granted!,Adgang tillladt!
+SERVER_INFO_ERROR_SEND_HEALTH_CHECK,Could not connect to the server.,Kunne ikke forbinde til serveren.
+SERVER_INFO_ERROR_SEND_ACCESS_CODE,Could not send access code to server.,Kunne ikke sende adgangskoden til serveren.
+SERVER_STATUS_ACCESS_DENIED,Access Denied.,Ingen adgang.
+SERVER_INFO_INVALID_API_KEY,Invalid API key.,Forkert adgangskode.
+NAME_ENTRY_TITLE,What is your name?,Hvad hedder du?
+NAME_PROMPT_LABEL,My name is: ,Mit navn er: 
+WELCOME_TO_USER,Welcome back {name}!,Velkommen tilbage {name}!
+ADD_WORK_ENTRY,Add work entry,Tilføj arbejdsperiode
+ADD_ENTRY_BUTTON,Add entry,Tilføj
+DATE_LABEL,Date:,Dato:
+DATE_MONTH_JAN,January,Januar
+DATE_MONTH_FEB,February,Februar
+DATE_MONTH_MAR,March,Marts
+DATE_MONTH_APR,April,April
+DATE_MONTH_MAY,May,Maj
+DATE_MONTH_JUN,June,Juni
+DATE_MONTH_JUL,July,Juli
+DATE_MONTH_AUG,August,August
+DATE_MONTH_SEP,September,September
+DATE_MONTH_OCT,October,Oktober
+DATE_MONTH_NOV,November,November
+DATE_MONTH_DEC,December,December
+START_TIME_LABEL,Start time:,Starttid:
+END_TIME_LABEL,End time:,Sluttid:
+NOTE_LABEL,Note (optional):,Note (valgfrit):
+NOTE_PLACEHOLDER,Add a note...,Tilføj en note...
+TIME_PICKER_OK,OK,OK
+TIME_PICKER_HOUR,Hour:,Time:
+TIME_PICKER_MINUTE,Minute:,Minut:
+DELETE,Delete,Slet
+DELETE_ALL_ENTRIES_BUTTON,Delete all,Slet alle
+DELETE_ALL_ENTRIES_CONFIRM_TITLE,Delete all entries?,Slet alle perioder?
+DELETE_ALL_ENTRIES_CONFIRM_MESSAGE,Are you sure you want to delete all work entries?,"Er du sikker på, at du vil slette alle arbejdsperioder?"
+CANNOT_BE_UNDONE,This action cannot be undone.,Denne handling kan ikke fortrydes.
+CONFIRM_BUTTON,Confirm,Bekræft
+CANCEL_BUTTON,Cancel,Annuller
+ENTRIES_COL_DATE,Date,Dato
+ENTRIES_COL_START,Start,Start
+ENTRIES_COL_END,End,Slut
+ENTRIES_COL_NOTE,Note,Note
+DATE_TODAY,Today,I dag
+DATE_PREV_MONTH,<,<
+DATE_NEXT_MONTH,>,>
+DATE_WEEKDAY_MON,Mon,Man
+DATE_WEEKDAY_TUE,Tue,Tir
+DATE_WEEKDAY_WED,Wed,Ons
+DATE_WEEKDAY_THU,Thu,Tor
+DATE_WEEKDAY_FRI,Fri,Fre
+DATE_WEEKDAY_SAT,Sat,Lør
+DATE_WEEKDAY_SUN,Sun,Søn
+DATE_WEEKDAY_FULL_MON,Monday,Mandag
+DATE_WEEKDAY_FULL_TUE,Tuesday,Tirsdag
+DATE_WEEKDAY_FULL_WED,Wednesday,Onsdag
+DATE_WEEKDAY_FULL_THU,Thursday,Torsdag
+DATE_WEEKDAY_FULL_FRI,Friday,Fredag
+DATE_WEEKDAY_FULL_SAT,Saturday,Lørdag
+DATE_WEEKDAY_FULL_SUN,Sunday,Søndag
+DATE_THE,the,den
+SAVE_ENTRY_BUTTON,Save,Gem
+DATE_MONTH_SHORT_JAN,Jan,jan
+DATE_MONTH_SHORT_FEB,Feb,feb
+DATE_MONTH_SHORT_MAR,Mar,mar
+DATE_MONTH_SHORT_APR,Apr,apr
+DATE_MONTH_SHORT_MAY,May,maj
+DATE_MONTH_SHORT_JUN,Jun,jun
+DATE_MONTH_SHORT_JUL,Jul,jul
+DATE_MONTH_SHORT_AUG,Aug,aug
+DATE_MONTH_SHORT_SEP,Sep,sep
+DATE_MONTH_SHORT_OCT,Oct,okt
+DATE_MONTH_SHORT_NOV,Nov,nov
+DATE_MONTH_SHORT_DEC,Dec,dec
+WAGES_TITLE,Wages,Lønindstillinger
+WAGES_HOURLY_LABEL,Hourly wage:,Timeløn:
+WAGES_TAX_LABEL,Tax (%):,Skat (%):
+WAGES_PERSONAL_ALLOWANCE_LABEL,Personal allowance:,Fradrag:
+WAGES_EVENING_SUPPLEMENT_LABEL,Evening supplement (kr/h - optional):,Aftentillæg (kr/t - valgfrit):
+WAGES_NIGHT_SUPPLEMENT_LABEL,Night supplement (kr/h - optional):,Nattillæg (kr/t - valgfrit):
+WAGES_SATURDAY_SUPPLEMENT_LABEL,Saturday supplement (kr/h - optional):,Lørdagstillæg (kr/h - valgfrit):
+WAGES_SUNDAY_SUPPLEMENT_LABEL,Sunday supplement (kr/h - optional):,Søndagstillæg (kr/h - valgfrit):
+WAGES_WINDOW_FROM,From:,Fra:
+WAGES_WINDOW_TO,To:,Til:
+WAGES_SAVE_BUTTON,Save,Gem
+WAGES_HOME_BUTTON_TOOLTIP,Back to home,Tilbage til forsiden
+NAV_HOME,Home,Forside
+NAV_WAGES,Wages,Lønindstillinger
+NAV_SALARY,Salary,Løn
+SALARY_TITLE,Salary,Løn
+SALARY_GROSS,Gross salary,Bruttoløn
+SALARY_ATP,- Labour Market Supplementary Pension,- Arbejdsmarkedets Tillægspension
+SALARY_AM_BIDRAG,- Labor market contribution (8%),- Arbejdsmarkedsbidrag (8%)
+SALARY_AFTER_AM,= After labor market contribution,= Efter AM-bidrag
+SALARY_FRADRAG,- Personal allowance,- Personfradrag
+SALARY_TAXABLE,= Taxable income,= Skattepligtig indkomst
+SALARY_TAX,- Income tax,- Skat
+SALARY_TAX_PERCENT,- Income tax ({percent}%),- Skat ({percent}%)
+SALARY_NET,= Net salary,= Nettoløn
+SALARY_TOTAL_HOURS,Total work hours,Samlede arbejdstimer
+SALARY_HOURLY_RATE,Hourly rate,Timeløn
+SALARY_EMPTY_MESSAGE,Add work entries and set your hourly wage in Wages to see your salary.,Tilføj arbejdsperioder og indtast din timeløn under Lønindstillinger for at se din løn.
+SALARY_WAGES_SECTION,Wages,Løn
+SALARY_DEDUCTIONS_SECTION,Tax and deductions,Skat og fradrag
+SALARY_NORMAL_HOURS,Normal hours,Normaltimer
+SALARY_EVENING_SUPPLEMENT,Evening allowance,Aftentillæg
+SALARY_NIGHT_SUPPLEMENT,Night allowance,Nattillæg
+SALARY_SATURDAY_SUPPLEMENT,Saturday allowance,Lørdagstillæg
+SALARY_SUNDAY_SUPPLEMENT,Sunday allowance,Søndagstillæg
+SALARY_HOURS,Hours,Timer
+SALARY_RATE,Rate (kr/h),Enh.pris
+SALARY_AMOUNT,Amount,Beløb
+SALARY_TYPE,Type,Tekst
+SALARY_GROSS_TOTAL,Total gross,I alt brutto
+SALARY_STEP_AFTER_ATP,= After labour market supplementary pension,= Efter Arbejdsmarkedets Tillægspension
+SETTINGS_TITLE,Settings,Indstillinger
+SETTINGS_LANGUAGE,Language,Sprog
+SETTINGS_THEME,Theme,Tema
+SETTINGS_THEME_LIGHT,Light,Lys
+SETTINGS_THEME_DARK,Dark,Mørk
+GO_BACK,Go back,Tilbage

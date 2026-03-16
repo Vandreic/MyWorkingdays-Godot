@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://hbenwnjyh1oj"]
+
+[ext_resource type="PackedScene" uid="uid://cae2j4owaaexq" path="res://templates/base_screen_template/base_screen_template.tscn" id="1_7a6fk"]
+[ext_resource type="Script" uid="uid://ykws4v6iqadb" path="res://screens/add_work_entry/add_work_entry_screen_manager.gd" id="2_manager"]
+
+[node name="AddWorkEntryScreen" unique_id=834491522 instance=ExtResource("1_7a6fk")]
+script = ExtResource("2_manager")
+
+[node name="TitleLabel" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="0" unique_id=246013616]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+text = "Add work entry"
+autowrap_mode = 2
+
+[node name="GridContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="1" unique_id=262994034]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.8
+grow_horizontal = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="DateContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/GridContainer" index="0" unique_id=1310532413]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="DateLabel" type="Label" parent="BackgroundPanel/UIContainer/GridContainer/DateContainer" index="0" unique_id=401847262]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "Date:"
+horizontal_alignment = 1
+
+[node name="DatePickerButton" type="Button" parent="BackgroundPanel/UIContainer/GridContainer/DateContainer" index="1" unique_id=501847263]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_FilledButton"
+text = "2025-03-05"
+
+[node name="StartTimeContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/GridContainer" index="1" unique_id=281380792]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="StartTimePickerLabel" type="Label" parent="BackgroundPanel/UIContainer/GridContainer/StartTimeContainer" index="0" unique_id=401847266]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "Start time:"
+horizontal_alignment = 1
+
+[node name="StartTimePickerButton" type="Button" parent="BackgroundPanel/UIContainer/GridContainer/StartTimeContainer" index="1" unique_id=501847267]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_FilledButton"
+text = "09:00"
+
+[node name="EndTimeContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/GridContainer" index="2" unique_id=665786213]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="EndTimeLabel" type="Label" parent="BackgroundPanel/UIContainer/GridContainer/EndTimeContainer" index="0" unique_id=401847269]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "End time:"
+horizontal_alignment = 1
+
+[node name="EndTimePickerButton" type="Button" parent="BackgroundPanel/UIContainer/GridContainer/EndTimeContainer" index="1" unique_id=501847270]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_FilledButton"
+text = "17:00"
+
+[node name="NoteContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/GridContainer" index="3" unique_id=1418597740]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="NoteLabel" type="Label" parent="BackgroundPanel/UIContainer/GridContainer/NoteContainer" index="0" unique_id=401847272]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "Note (optional):"
+horizontal_alignment = 1
+
+[node name="NoteInput" type="LineEdit" parent="BackgroundPanel/UIContainer/GridContainer/NoteContainer" index="1" unique_id=501847273]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_LineTextInput"
+placeholder_text = "Add a note..."
+clear_button_enabled = true
+
+[node name="ButtonRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="2" unique_id=701847265]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.875
+anchor_right = 0.8
+anchor_bottom = 0.96
+grow_horizontal = 2
+theme_override_constants/separation = 60
+
+[node name="CancelButton" type="Button" parent="BackgroundPanel/UIContainer/ButtonRow" index="0" unique_id=901847267]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_FilledButton"
+text = "Cancel"
+
+[node name="SubmitButton" type="Button" parent="BackgroundPanel/UIContainer/ButtonRow" index="1" unique_id=601847264]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_FilledButton"
+text = "Add entry"
+
+[node name="DeleteButton" type="Button" parent="BackgroundPanel/UIContainer/ButtonRow" index="2" unique_id=801847266]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_FilledButton"
+text = "Delete"
+
+[node name="NavigationBarContainer" parent="." index="1" unique_id=295877241]
+visible = false

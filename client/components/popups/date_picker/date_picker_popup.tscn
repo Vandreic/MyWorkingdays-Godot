@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://ds1v0pxinqd1d"]
+
+[ext_resource type="PackedScene" uid="uid://n0hnyjxf3qvj" path="res://templates/base_popup_template/base_popup_template.tscn" id="1_8mscy"]
+[ext_resource type="Script" uid="uid://cngqxtbnvil8v" path="res://components/popups/date_picker/date_picker_popup.gd" id="2_rdq5x"]
+
+[node name="DatePickerPopup" unique_id=362013060 instance=ExtResource("1_8mscy")]
+position = Vector2i(10, 0)
+size = Vector2i(700, 750)
+script = ExtResource("2_rdq5x")
+
+[node name="RootContainer" type="VBoxContainer" parent="BackgroundPanel/ContentContainer" parent_id_path=PackedInt32Array(1516561918) index="0" unique_id=25214065]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="NavigationContainer" type="VBoxContainer" parent="BackgroundPanel/ContentContainer/RootContainer" index="0" unique_id=645424110]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HeaderContainer" type="HBoxContainer" parent="BackgroundPanel/ContentContainer/RootContainer/NavigationContainer" index="0" unique_id=757148326]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="PrevMonthButton" type="Button" parent="BackgroundPanel/ContentContainer/RootContainer/NavigationContainer/HeaderContainer" index="0" unique_id=2046824135]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_type_variation = &"UI_FilledButton"
+text = "<"
+
+[node name="MonthYearLabel" type="Label" parent="BackgroundPanel/ContentContainer/RootContainer/NavigationContainer/HeaderContainer" index="1" unique_id=719380586]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label"
+text = "2025 March"
+horizontal_alignment = 1
+
+[node name="NextMonthButton" type="Button" parent="BackgroundPanel/ContentContainer/RootContainer/NavigationContainer/HeaderContainer" index="2" unique_id=447878546]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_type_variation = &"UI_FilledButton"
+text = ">"
+
+[node name="TodayButton" type="Button" parent="BackgroundPanel/ContentContainer/RootContainer/NavigationContainer" index="1" unique_id=1243133526]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"UI_FilledButton"
+text = "Today"
+
+[node name="CalendarVBox" type="VBoxContainer" parent="BackgroundPanel/ContentContainer/RootContainer" index="1" unique_id=1031325861]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="WeekdayRow" type="HBoxContainer" parent="BackgroundPanel/ContentContainer/RootContainer/CalendarVBox" index="0" unique_id=1810348444]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="DayGrid" type="GridContainer" parent="BackgroundPanel/ContentContainer/RootContainer/CalendarVBox" index="1" unique_id=1698056192]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 7

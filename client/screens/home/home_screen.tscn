@@ -1,0 +1,255 @@
+[gd_scene format=3 uid="uid://brqg3ffc02j55"]
+
+[ext_resource type="PackedScene" uid="uid://cae2j4owaaexq" path="res://templates/base_screen_template/base_screen_template.tscn" id="1_edi7g"]
+[ext_resource type="Script" uid="uid://dojcx0de5ebst" path="res://screens/home/home_screen_manager.gd" id="2_j3u56"]
+[ext_resource type="Texture2D" uid="uid://6vkuaqgmgi2x" path="res://assets/icons/open.svg" id="3_d3rqm"]
+[ext_resource type="Texture2D" uid="uid://dt3aikah78igf" path="res://assets/icons/home.svg" id="4_home"]
+[ext_resource type="Texture2D" uid="uid://7ndwsvonnbje" path="res://assets/icons/payments.svg" id="5_b0q3r"]
+[ext_resource type="Texture2D" uid="uid://ccta4vu3kwduh" path="res://assets/icons/analytics.svg" id="6_k7ryw"]
+[ext_resource type="Script" uid="uid://b4u7csxl3v57n" path="res://utilities/scroll_container_passthrough.gd" id="8_scroll"]
+
+[node name="HomeScreen" unique_id=485142791 instance=ExtResource("1_edi7g")]
+script = ExtResource("2_j3u56")
+
+[node name="TitleLabel" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="1" unique_id=246013616]
+unique_name_in_owner = true
+grow_horizontal = 2
+text = "Welcome back <user>!"
+autowrap_mode = 2
+
+[node name="EntriesContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="2" unique_id=559427470]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.125
+anchor_right = 1.0
+anchor_bottom = 0.85
+
+[node name="EntriesScrollContentMargin" type="MarginContainer" parent="BackgroundPanel/UIContainer/EntriesContainer" index="0" unique_id=179032627]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 24
+
+[node name="WorkEntriesColumnHeader" type="HBoxContainer" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContentMargin" index="0" unique_id=1623298903]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_stretch_ratio = 0.1
+
+[node name="ColumnHeaderDateLabel" type="Label" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContentMargin/WorkEntriesColumnHeader" index="0" unique_id=577648120]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_type_variation = &"UI_Label"
+text = "Date"
+
+[node name="ColumnHeaderStartTimeLabel" type="Label" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContentMargin/WorkEntriesColumnHeader" index="1" unique_id=244927757]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.25
+theme_type_variation = &"UI_Label"
+text = "Start"
+
+[node name="ColumnHeaderEndTimeLabel" type="Label" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContentMargin/WorkEntriesColumnHeader" index="2" unique_id=112529547]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label"
+text = "End"
+
+[node name="ColumnHeaderNoteLabel" type="Label" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContentMargin/WorkEntriesColumnHeader" index="3" unique_id=332975293]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.75
+theme_type_variation = &"UI_Label"
+text = "Note"
+horizontal_alignment = 1
+
+[node name="ColumnHeaderSpacer" type="Control" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContentMargin/WorkEntriesColumnHeader" index="4" unique_id=432975294]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="EntriesScrollContainer" type="ScrollContainer" parent="BackgroundPanel/UIContainer/EntriesContainer" index="1" unique_id=1548081107]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+script = ExtResource("8_scroll")
+
+[node name="EntriesScrollContentMargin" type="MarginContainer" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContainer" index="0" unique_id=1548081108]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_right = 24
+
+[node name="WorkEntriesList" type="VBoxContainer" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContainer/EntriesScrollContentMargin" index="0" unique_id=736991269]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="WorkEntryRowTemplate" type="Panel" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContainer/EntriesScrollContentMargin/WorkEntriesList" index="0" unique_id=748301644]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_type_variation = &"UI_ListBackground"
+
+[node name="WorkEntryRowContent" type="HBoxContainer" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContainer/EntriesScrollContentMargin/WorkEntriesList/WorkEntryRowTemplate" index="0" unique_id=1681128238]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WorkEntryDateLabel" type="Label" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContainer/EntriesScrollContentMargin/WorkEntriesList/WorkEntryRowTemplate/WorkEntryRowContent" index="0" unique_id=1973080615]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_type_variation = &"UI_ListButton_Text_Small"
+text = "Søn 3. mart."
+
+[node name="WorkEntryStartTimeLabel" type="Label" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContainer/EntriesScrollContentMargin/WorkEntriesList/WorkEntryRowTemplate/WorkEntryRowContent" index="1" unique_id=1591412815]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.25
+theme_type_variation = &"UI_ListButton_Text_Small"
+text = "08:00"
+
+[node name="WorkEntryEndTimeLabel" type="Label" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContainer/EntriesScrollContentMargin/WorkEntriesList/WorkEntryRowTemplate/WorkEntryRowContent" index="2" unique_id=1217095225]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_ListButton_Text_Small"
+text = "16:00"
+
+[node name="WorkEntryNoteLabel" type="Label" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContainer/EntriesScrollContentMargin/WorkEntriesList/WorkEntryRowTemplate/WorkEntryRowContent" index="3" unique_id=1693861908]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.75
+theme_type_variation = &"UI_ListButton_Text_Small"
+text = "–"
+horizontal_alignment = 1
+
+[node name="WorkEntryEditButton" type="TextureButton" parent="BackgroundPanel/UIContainer/EntriesContainer/EntriesScrollContainer/EntriesScrollContentMargin/WorkEntriesList/WorkEntryRowTemplate/WorkEntryRowContent" index="4" unique_id=579704134]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("3_d3rqm")
+stretch_mode = 5
+
+[node name="DeleteAllButton" type="Button" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="3" unique_id=520403916]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 80)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.925
+anchor_bottom = 0.925
+offset_top = -80.0
+offset_right = 80.0
+theme_type_variation = &"UI_FilledButton"
+text = "Delete All"
+
+[node name="AddWorkEntryButton" type="Button" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="4" unique_id=1504181772]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.925
+anchor_right = 1.0
+anchor_bottom = 0.925
+offset_left = -80.0
+offset_top = -80.0
+theme_type_variation = &"UI_FilledButton"
+theme_override_font_sizes/font_size = 56
+text = "+"
+
+[node name="HomeButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="0" unique_id=151872676]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/HomeButton" index="0" unique_id=782242403]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/HomeButton/VBoxContainer" index="0" unique_id=1406368768]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_home")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/HomeButton/VBoxContainer" index="1" unique_id=2113174671]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Home"
+horizontal_alignment = 1
+
+[node name="WagesButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="1" unique_id=744297944]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/WagesButton" index="0" unique_id=782242404]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/WagesButton/VBoxContainer" index="0" unique_id=1406368769]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_b0q3r")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/WagesButton/VBoxContainer" index="1" unique_id=2113174672]
+layout_mode = 2
+text = "Wages"
+horizontal_alignment = 1
+
+[node name="SalaryButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="2" unique_id=1207102915]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/SalaryButton" index="0" unique_id=782242405]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/SalaryButton/VBoxContainer" index="0" unique_id=1406368770]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("6_k7ryw")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/SalaryButton/VBoxContainer" index="1" unique_id=2113174673]
+layout_mode = 2
+text = "Salary"
+horizontal_alignment = 1

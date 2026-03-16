@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://bjhob1c2meu8q"]
+
+[ext_resource type="PackedScene" uid="uid://cae2j4owaaexq" path="res://templates/base_screen_template/base_screen_template.tscn" id="1_ygu2p"]
+[ext_resource type="Script" uid="uid://cudvkybdyexje" path="res://screens/login/login_screen_manager.gd" id="2_mkebd"]
+[ext_resource type="Texture2D" uid="uid://crhnwr7gcbhnq" path="res://assets/icons/circle.svg" id="3_jsh6f"]
+[ext_resource type="Texture2D" uid="uid://ch1y2ide3yf2p" path="res://assets/icons/sync.svg" id="4_mkebd"]
+[ext_resource type="Texture2D" uid="uid://bs2bktpg5vfnu" path="res://assets/icons/language.svg" id="5_ivq4g"]
+
+[node name="LoginScreen" unique_id=921599697 instance=ExtResource("1_ygu2p")]
+script = ExtResource("2_mkebd")
+
+[node name="TitleLabel" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="0" unique_id=246013616]
+unique_name_in_owner = true
+text = "Welcome to 
+My Workdays"
+autowrap_mode = 2
+
+[node name="LoginUIBox" type="VBoxContainer" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="1" unique_id=1789194625]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.275
+anchor_right = 1.0
+anchor_bottom = 0.7
+theme_override_constants/separation = 40
+
+[node name="ServerStatusContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/LoginUIBox" index="0" unique_id=646268356]
+layout_mode = 2
+alignment = 1
+
+[node name="StatusRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/LoginUIBox/ServerStatusContainer" index="0" unique_id=1207515661]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BackgroundPanel/UIContainer/LoginUIBox/ServerStatusContainer/StatusRow" index="0" unique_id=234858006]
+layout_mode = 2
+
+[node name="ServerStatusIndicator" type="TextureRect" parent="BackgroundPanel/UIContainer/LoginUIBox/ServerStatusContainer/StatusRow/HBoxContainer" index="0" unique_id=959237838]
+unique_name_in_owner = true
+modulate = Color(0.61960787, 0.61960787, 0.61960787, 1)
+custom_minimum_size = Vector2(14, 14)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_jsh6f")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ServerStatusLabel" type="Label" parent="BackgroundPanel/UIContainer/LoginUIBox/ServerStatusContainer/StatusRow/HBoxContainer" index="1" unique_id=1545746445]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label"
+text = "Checking Server Status..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReconnectButton" type="TextureButton" parent="BackgroundPanel/UIContainer/LoginUIBox/ServerStatusContainer/StatusRow" index="1" unique_id=76792921]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.19215687, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = ExtResource("4_mkebd")
+stretch_mode = 5
+
+[node name="ServerStatusDescription" type="Label" parent="BackgroundPanel/UIContainer/LoginUIBox/ServerStatusContainer" index="1" unique_id=1855428603]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(500, 30)
+layout_mode = 2
+theme_type_variation = &"UI_Label"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AccessCodeContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/LoginUIBox" index="1" unique_id=947604866]
+layout_mode = 2
+
+[node name="AccessCodeLabel" type="Label" parent="BackgroundPanel/UIContainer/LoginUIBox/AccessCodeContainer" index="0" unique_id=1017839837]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"UI_Label"
+text = "Access Code"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AccessCodeFormContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/LoginUIBox/AccessCodeContainer" index="1" unique_id=1258853104]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="AccessCodeInput" type="LineEdit" parent="BackgroundPanel/UIContainer/LoginUIBox/AccessCodeContainer/AccessCodeFormContainer" index="0" unique_id=1838907147]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_type_variation = &"UI_LineTextInput"
+placeholder_text = "Write access code here..."
+clear_button_enabled = true
+caret_blink = true
+
+[node name="ConnectButton" type="Button" parent="BackgroundPanel/UIContainer/LoginUIBox/AccessCodeContainer/AccessCodeFormContainer" index="1" unique_id=436639305]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_type_variation = &"UI_FilledButton"
+disabled = true
+text = "Connect"
+
+[node name="ChangeLanguageButton" type="TextureButton" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="2" unique_id=1807861371]
+unique_name_in_owner = true
+modulate = Color(0.19215687, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -60.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("5_ivq4g")
+stretch_mode = 5
+
+[node name="AppVersionLabel" type="Label" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="3" unique_id=2076361273]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.975
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_type_variation = &"UI_Label_Small"
+text = "v0.0.0"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="NavigationBarContainer" parent="." index="1" unique_id=295877241]
+visible = false

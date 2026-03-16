@@ -1,0 +1,51 @@
+:root {
+  /* Light Theme Colors */
+    --primary: #2F6F73;
+    --on-primary: #FFFFFF;
+    --primary-container: #BBE3E6;
+    --on-primary-container: #153133;
+    --secondary: #7FA6A0;
+    --on-secondary: #FFFFFF;
+    --secondary-container: #D5E6E3;
+    --on-secondary-container: #273331;
+    --tertiary: #8FA1B3;
+    --on-tertiary: #FFFFFF;
+    --tertiary-container: #D7DEE6;
+    --on-tertiary-container: #292E33;
+    --error: #B3261E;
+    --on-error: #FFFFFF;
+    --error-container: #E6ACA9;
+    --on-error-container: #330B09;
+    --background: #fcfcfc;
+    --on-background: #313333;
+    --surface: #fcfcfc;
+    --on-surface: #313333;
+    --surface-variant: #dde5e6;
+    --on-surface-variant: #5a6566;
+    --outline: #879899;
+
+    /* Dark Theme Colors */
+    --primary-dark: #A9E2E6;
+    --on-primary-dark: #1F4A4C;
+    --primary-container-dark: #2A6366;
+    --on-primary-container-dark: #BBE3E6;
+    --secondary-dark: #CEE6E1;
+    --on-secondary-dark: #3B4C49;
+    --secondary-container-dark: #4F6662;
+    --on-secondary-container-dark: #D5E6E3;
+    --tertiary-dark: #D1DBE6;
+    --on-tertiary-dark: #3D454C;
+    --tertiary-container-dark: #525C66;
+    --on-tertiary-container-dark: #D7DEE6;
+    --error-dark: #E69490;
+    --on-error-dark: #4C100D;
+    --error-container-dark: #661511;
+    --on-error-container-dark: #E6ACA9;
+    --background-dark: #313333;
+    --on-background-dark: #e3e5e6;
+    --surface-dark: #313333;
+    --on-surface-dark: #e3e5e6;
+    --surface-variant-dark: #5a6566;
+    --on-surface-variant-dark: #d9e5e6;
+    --outline-dark: #a5b2b3;
+}

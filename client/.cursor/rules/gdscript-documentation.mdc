@@ -1,0 +1,130 @@
+---
+description: GDScript code documentation using Godot-style ## comments
+globs: "**/*.gd"
+alwaysApply: false
+---
+
+# GDScript Code Documentation
+
+Follow Godot's official documentation format for all `.gd` files. Use `##` documentation comments that appear in the editor help window.
+
+## Documentation Comment Format
+
+- Use `##` (double hash) for documentation comments.
+- Place documentation immediately before the member or script it describes.
+- Use `[br]` for line breaks to keep documentation readable when descriptions span multiple sentences.
+
+## Script-Level Documentation (Top of File)
+
+Place at the top of the script, after `extends` and before any members:
+
+```gdscript
+## Brief description of the class's role and functionality (under ~200 characters).
+##
+## Extended description of what the script does,[br]
+## how it works, and any further detail.
+##
+## @tutorial: https://example.com  # Optional
+## @deprecated: Use [OtherClass] instead.  # If applicable
+## @experimental  # If API is unstable
+```
+
+## Member Documentation Order (Match Code Order)
+
+Document members in the same order they appear in code:
+
+1. **signals** → 2. **enums** (document each enum value) → 3. **constants** → 4. **@export variables** → 5. **regular variables** → 6. **@onready variables** → 7. **methods** (`_init`, `_ready`, virtual callbacks, then custom methods)
+
+## BBCode Tags (Use Consistently)
+
+| Tag | Use |
+|-----|-----|
+| `[br]` | Line break for readability |
+| `[code]value[/code]` | Inline code, literals, arguments |
+| `[param name]` | Parameter names in method docs |
+| `[member Class.name]` | Link to property |
+| `[method Class.name]` | Link to method |
+| `[signal Class.name]` | Link to signal |
+| `[constant Class.name]` | Link to constant |
+| `[enum Class.name]` | Link to enum |
+| `[b]text[/b]` | Bold emphasis |
+
+## Writing Guidelines (Strict)
+
+- **Active voice**: "Returns the value" not "The value is returned".
+- **Precise verbs**: Use `position`, `rotate`, `fade` instead of generic `set`, `make`.
+- **Avoid -ing verbs** for instant actions: "stops" not "stopping".
+- **Ban these 8 words**: obvious, simple, basic, easy, actual, just, clear, however.
+- **Explicit references**: Repeat names instead of "the former" or "the latter".
+- **Possession**: Use `'s` (e.g., "the node's position").
+- **Oxford comma**: "A, B, and C".
+- **Booleans**: Describe as "If [code]true[/code], ..." or "If [code]false[/code], ...".
+- **Return values**: End method docs with "Returns ..." when relevant (skip for `set_`/`get_` methods).
+
+## Examples
+
+```gdscript
+## Emitted when the door opens.
+signal door_opened
+
+## Direction to move. Use with [method move_toward].
+enum Direction {
+	## Move up.
+	UP,
+	## Move down.
+	DOWN,
+}
+
+## Maximum movement speed in pixels per second.
+const MAX_SPEED := 200.0
+
+## If [code]true[/code], the node processes input each frame.
+@export var process_input: bool = true
+
+## Transitions to the target screen.[br]
+## Pass [param metadata] to call [method set_edit_data] on the new screen.
+func change_screen(screen: Screen, metadata: Variant = null) -> void:
+	pass
+```
+
+## Complete Script Example
+
+```gdscript
+class_name MyNode
+extends Node
+## Brief overview of the node's role.
+##
+## Extended description of functionality.[br]
+## Use [br] to separate logical sections.
+
+## Emitted when processing completes.
+signal processing_completed
+
+## Processing mode.
+enum Mode {
+	## Idle mode.
+	IDLE,
+	## Active mode.
+	ACTIVE,
+}
+
+## Default timeout in seconds.
+const DEFAULT_TIMEOUT := 5.0
+
+## If [code]true[/code], starts automatically.
+@export var autostart := false
+
+var _timer: float = 0.0
+
+@onready var _label: Label = %Label
+
+
+func _ready() -> void:
+	_connect_signals()
+
+
+## Starts the processing cycle.[br]
+## Returns [code]true[/code] if started successfully.
+func start() -> bool:
+	return true
+```

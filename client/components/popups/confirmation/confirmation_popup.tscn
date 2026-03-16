@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c8xk2qm5vj4hn"]
+
+[ext_resource type="PackedScene" uid="uid://n0hnyjxf3qvj" path="res://templates/base_popup_template/base_popup_template.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://byhilvi4ckglw" path="res://components/popups/confirmation/confirmation_popup.gd" id="2_script"]
+
+[node name="ConfirmationPopup" unique_id=362013060 instance=ExtResource("1_base")]
+position = Vector2i(160, 300)
+size = Vector2i(460, 300)
+script = ExtResource("2_script")
+
+[node name="RootContainer" type="VBoxContainer" parent="BackgroundPanel/ContentContainer" parent_id_path=PackedInt32Array(1516561918) index="0" unique_id=848468517]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="BackgroundPanel/ContentContainer/RootContainer" index="0" unique_id=1]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_type_variation = &"UI_Label"
+text = "Title"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MessageLabel" type="Label" parent="BackgroundPanel/ContentContainer/RootContainer" index="1" unique_id=2]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_type_variation = &"UI_Label"
+text = "Message"
+autowrap_mode = 2
+
+[node name="WarningLabel" type="Label" parent="BackgroundPanel/ContentContainer/RootContainer" index="2" unique_id=3]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_type_variation = &"UI_Label_Small"
+text = "This action cannot be undone."
+autowrap_mode = 2
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="BackgroundPanel/ContentContainer/RootContainer" index="3" unique_id=222597144]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="BackgroundPanel/ContentContainer/RootContainer/ButtonsContainer" index="0" unique_id=4]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_type_variation = &"UI_FilledButton"
+text = "Cancel"
+
+[node name="ConfirmButton" type="Button" parent="BackgroundPanel/ContentContainer/RootContainer/ButtonsContainer" index="1" unique_id=5]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_type_variation = &"UI_FilledButton"
+text = "Confirm"

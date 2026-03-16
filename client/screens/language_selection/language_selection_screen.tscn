@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://pwjp33nvh68"]
+
+[ext_resource type="PackedScene" uid="uid://cae2j4owaaexq" path="res://templates/base_screen_template/base_screen_template.tscn" id="1_a62kg"]
+[ext_resource type="Script" uid="uid://c86xhp787ou84" path="res://screens/language_selection/language_selection_screen_manager.gd" id="2_1ggdy"]
+[ext_resource type="Texture2D" uid="uid://btl2qhamwppn5" path="res://assets/icons/country_flags/gb.svg" id="2_m235m"]
+[ext_resource type="Texture2D" uid="uid://dtm404qro23v1" path="res://assets/icons/country_flags/da.svg" id="3_qol1g"]
+[ext_resource type="Texture2D" uid="uid://crhnwr7gcbhnq" path="res://assets/icons/circle.svg" id="4_ppenx"]
+
+[node name="LanguageSelectionScreen" unique_id=1931971846 instance=ExtResource("1_a62kg")]
+script = ExtResource("2_1ggdy")
+
+[node name="TitleLabel" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="0" unique_id=246013616]
+unique_name_in_owner = true
+text = "Choose a language"
+
+[node name="LanguagesContainer" type="GridContainer" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="1" unique_id=217509363]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.00003
+offset_top = -118.50003
+offset_right = 190.0
+offset_bottom = 91.49997
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="ENLanguageButton" type="Button" parent="BackgroundPanel/UIContainer/LanguagesContainer" index="0" unique_id=1176024837]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 180)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_type_variation = &"UI_FilledButton"
+text = "
+"
+
+[node name="ENButtonContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/LanguagesContainer/ENLanguageButton" index="0" unique_id=681225707]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ENCountryFlag" type="TextureRect" parent="BackgroundPanel/UIContainer/LanguagesContainer/ENLanguageButton/ENButtonContainer" index="0" unique_id=1137472690]
+custom_minimum_size = Vector2(96, 72)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_m235m")
+expand_mode = 1
+
+[node name="ENLanguageLabel" type="Label" parent="BackgroundPanel/UIContainer/LanguagesContainer/ENLanguageButton/ENButtonContainer" index="1" unique_id=1818442175]
+layout_mode = 2
+theme_type_variation = &"UI_FilledButton_Text"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "English"
+horizontal_alignment = 1
+
+[node name="DALanguageButton" type="Button" parent="BackgroundPanel/UIContainer/LanguagesContainer" index="1" unique_id=598133323]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 180)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_type_variation = &"UI_FilledButton"
+text = "
+"
+
+[node name="DAButtonContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer/LanguagesContainer/DALanguageButton" index="0" unique_id=836901813]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="DACountryFlag" type="TextureRect" parent="BackgroundPanel/UIContainer/LanguagesContainer/DALanguageButton/DAButtonContainer" index="0" unique_id=935346629]
+custom_minimum_size = Vector2(96, 72)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_qol1g")
+expand_mode = 1
+
+[node name="DALanguageLabel" type="Label" parent="BackgroundPanel/UIContainer/LanguagesContainer/DALanguageButton/DAButtonContainer" index="1" unique_id=1146953946]
+layout_mode = 2
+theme_type_variation = &"UI_FilledButton_Text"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Dansk"
+horizontal_alignment = 1
+
+[node name="ENSelectedLanguageIndicator" type="TextureRect" parent="BackgroundPanel/UIContainer/LanguagesContainer" index="2" unique_id=1432435122]
+unique_name_in_owner = true
+modulate = Color(0.61960787, 0.61960787, 0.61960787, 1)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_ppenx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DASelectedLanguageIndicator" type="TextureRect" parent="BackgroundPanel/UIContainer/LanguagesContainer" index="3" unique_id=1957611481]
+unique_name_in_owner = true
+modulate = Color(0.61960787, 0.61960787, 0.61960787, 1)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_ppenx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ContinueButton" type="Button" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="2" unique_id=1113208640]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.875
+anchor_right = 0.7
+anchor_bottom = 0.96
+theme_type_variation = &"UI_FilledButton"
+text = "Continue"
+
+[node name="AppVersionLabel" type="Label" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="3" unique_id=1110882754]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.975
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_type_variation = &"UI_Label_Small"
+text = "v0.0.0"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="NavigationBarContainer" parent="." index="1" unique_id=295877241]
+visible = false

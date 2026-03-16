@@ -1,0 +1,629 @@
+[gd_scene format=3 uid="uid://b2xm5k7qp8nwr"]
+
+[ext_resource type="PackedScene" uid="uid://cae2j4owaaexq" path="res://templates/base_screen_template/base_screen_template.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://b0wcatoqu3aot" path="res://screens/salary/salary_screen_manager.gd" id="2_script"]
+[ext_resource type="Texture2D" uid="uid://dt3aikah78igf" path="res://assets/icons/home.svg" id="3_home"]
+[ext_resource type="Texture2D" uid="uid://7ndwsvonnbje" path="res://assets/icons/payments.svg" id="4_payments"]
+[ext_resource type="Texture2D" uid="uid://ccta4vu3kwduh" path="res://assets/icons/analytics.svg" id="5_analytics"]
+[ext_resource type="Script" uid="uid://b4u7csxl3v57n" path="res://utilities/scroll_container_passthrough.gd" id="6_scroll"]
+
+[node name="SalaryScreen" unique_id=834491522 instance=ExtResource("1_base")]
+script = ExtResource("2_script")
+
+[node name="TitleLabel" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="0" unique_id=246013616]
+unique_name_in_owner = true
+text = "Salary"
+
+[node name="EmptyMessageLabel" type="Label" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="1" unique_id=1996293550]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.25
+anchor_right = 1.0
+anchor_bottom = 0.35
+grow_horizontal = 2
+theme_type_variation = &"UI_Label"
+text = "Add work entries and set your hourly wage to see your salary."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="SalaryScrollContainer" type="ScrollContainer" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="2" unique_id=1376779154]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.15
+anchor_right = 1.0
+anchor_bottom = 0.92
+offset_left = 20.0
+offset_top = 80.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+script = ExtResource("6_scroll")
+
+[node name="PayslipMarginContainer" type="MarginContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer" index="0" unique_id=246013850]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_right = 16
+
+[node name="PayslipContent" type="VBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer" index="0" unique_id=1709411713]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="WagesSectionLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="0" unique_id=246013700]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label"
+text = "Wages"
+
+[node name="WagesTableHeader" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="1" unique_id=246013701]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TypeHeader" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/WagesTableHeader" index="0" unique_id=246013702]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "Type"
+
+[node name="HoursRateAmountContainer" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/WagesTableHeader" index="1" unique_id=391347742]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.0
+alignment = 2
+
+[node name="HoursHeader" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/WagesTableHeader/HoursRateAmountContainer" index="0" unique_id=246013703]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "Hours"
+horizontal_alignment = 2
+
+[node name="RateHeader" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/WagesTableHeader/HoursRateAmountContainer" index="1" unique_id=246013704]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "Rate (kr/h)"
+horizontal_alignment = 2
+
+[node name="AmountHeader" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/WagesTableHeader/HoursRateAmountContainer" index="2" unique_id=246013705]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "Amount"
+horizontal_alignment = 2
+
+[node name="NormalHoursRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="2" unique_id=1278439425]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="NormalHoursTypeLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/NormalHoursRow" index="0" unique_id=246013706]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "Normal hours"
+
+[node name="HoursRateAmountContainer" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/NormalHoursRow" index="1" unique_id=1506807321]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="NormalHoursValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/NormalHoursRow/HoursRateAmountContainer" index="0" unique_id=509550088]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="NormalHoursRateValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/NormalHoursRow/HoursRateAmountContainer" index="1" unique_id=246013707]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="NormalHoursAmountValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/NormalHoursRow/HoursRateAmountContainer" index="2" unique_id=246013708]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="EveningSupplementRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="3" unique_id=246013710]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="EveningSupplementTypeLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/EveningSupplementRow" index="0" unique_id=246013711]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "Evening allowance"
+
+[node name="HoursRateAmountContainer" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/EveningSupplementRow" index="1" unique_id=1068060520]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="EveningSupplementHoursValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/EveningSupplementRow/HoursRateAmountContainer" index="0" unique_id=246013712]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="EveningSupplementRateValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/EveningSupplementRow/HoursRateAmountContainer" index="1" unique_id=246013713]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="EveningSupplementAmountValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/EveningSupplementRow/HoursRateAmountContainer" index="2" unique_id=246013714]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="NightSupplementRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="4" unique_id=246013720]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="NightSupplementTypeLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/NightSupplementRow" index="0" unique_id=246013721]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "Night allowance"
+
+[node name="HoursRateAmountContainer" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/NightSupplementRow" index="1" unique_id=246013725]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="NightSupplementHoursValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/NightSupplementRow/HoursRateAmountContainer" index="0" unique_id=246013722]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="NightSupplementRateValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/NightSupplementRow/HoursRateAmountContainer" index="1" unique_id=246013723]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="NightSupplementAmountValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/NightSupplementRow/HoursRateAmountContainer" index="2" unique_id=246013724]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="SaturdaySupplementRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="5" unique_id=246013730]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SaturdaySupplementTypeLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/SaturdaySupplementRow" index="0" unique_id=246013731]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "Saturday allowance"
+
+[node name="HoursRateAmountContainer" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/SaturdaySupplementRow" index="1" unique_id=246013735]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="SaturdaySupplementHoursValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/SaturdaySupplementRow/HoursRateAmountContainer" index="0" unique_id=246013732]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="SaturdaySupplementRateValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/SaturdaySupplementRow/HoursRateAmountContainer" index="1" unique_id=246013733]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="SaturdaySupplementAmountValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/SaturdaySupplementRow/HoursRateAmountContainer" index="2" unique_id=246013734]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="SundaySupplementRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="6" unique_id=246013740]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SundaySupplementTypeLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/SundaySupplementRow" index="0" unique_id=246013741]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "Sunday allowance"
+
+[node name="HoursRateAmountContainer" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/SundaySupplementRow" index="1" unique_id=246013746]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="SundaySupplementHoursValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/SundaySupplementRow/HoursRateAmountContainer" index="0" unique_id=246013742]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="SundaySupplementRateValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/SundaySupplementRow/HoursRateAmountContainer" index="1" unique_id=246013743]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="SundaySupplementAmountValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/SundaySupplementRow/HoursRateAmountContainer" index="2" unique_id=246013744]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="GrossTotalRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="7" unique_id=1957652307]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="GrossTotalLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/GrossTotalRow" index="0" unique_id=246013750]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "Total gross"
+
+[node name="GrossTotalSpacer" type="Control" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/GrossTotalRow" index="1" unique_id=246013751]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+
+[node name="GrossTotalRateSpacer" type="Control" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/GrossTotalRow" index="2" unique_id=246013752]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+
+[node name="GrossTotalValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/GrossTotalRow" index="3" unique_id=2079264685]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"UI_Label"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="Separator" type="HSeparator" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="8" unique_id=246013760]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TaxAndDeductionsSectionLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="9" unique_id=246013761]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_Label"
+text = "Tax and deductions"
+
+[node name="Step1GrossRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="10" unique_id=246013770]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Step1GrossLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step1GrossRow" index="0" unique_id=593423399]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "= Gross salary"
+
+[node name="Step1GrossValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step1GrossRow" index="1" unique_id=246013771]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="Step2AtpRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="11" unique_id=246013620]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Step2AtpLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step2AtpRow" index="0" unique_id=246013621]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "- ATP (private månedslønnet)"
+
+[node name="Step2AtpValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step2AtpRow" index="1" unique_id=246013622]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="Step3AfterAtpRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="12" unique_id=246013780]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Step3AfterAtpLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step3AfterAtpRow" index="0" unique_id=246013781]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "= After ATP"
+
+[node name="Step3AfterAtpValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step3AfterAtpRow" index="1" unique_id=246013782]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="Step4AmBidragRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="13" unique_id=964294469]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Step4AmBidragLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step4AmBidragRow" index="0" unique_id=727047660]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "- Arbejdsmarkedsbidrag (8%)"
+
+[node name="Step4AmBidragValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step4AmBidragRow" index="1" unique_id=20169748]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="Step5AfterAmRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="14" unique_id=327845155]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Step5AfterAmLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step5AfterAmRow" index="0" unique_id=716000714]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "= After AM-bidrag"
+
+[node name="Step5AfterAmValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step5AfterAmRow" index="1" unique_id=1505550611]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="Step6FradragRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="15" unique_id=369238680]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Step6FradragLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step6FradragRow" index="0" unique_id=355647131]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "- Personal allowance"
+
+[node name="Step6FradragValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step6FradragRow" index="1" unique_id=472305926]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="Step7TaxableRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="16" unique_id=317676014]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Step7TaxableLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step7TaxableRow" index="0" unique_id=228523916]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "= Taxable income"
+
+[node name="Step7TaxableValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step7TaxableRow" index="1" unique_id=1251792901]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="Step8SkatRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="17" unique_id=552499019]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Step8SkatLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step8SkatRow" index="0" unique_id=2078030651]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label_Small"
+text = "- Income tax"
+
+[node name="Step8SkatValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step8SkatRow" index="1" unique_id=443739203]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"UI_Label_Small"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="Step9NetRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="18" unique_id=1677413980]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Step9NetLabel" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step9NetRow" index="0" unique_id=1121821578]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_Label"
+text = "= Net salary (nettoløn)"
+
+[node name="Step9NetValue" type="Label" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent/Step9NetRow" index="1" unique_id=881896891]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"UI_Label"
+text = "0,00"
+horizontal_alignment = 2
+
+[node name="ScrollBottomSpacer" type="Control" parent="BackgroundPanel/UIContainer/SalaryScrollContainer/PayslipMarginContainer/PayslipContent" index="19" unique_id=246013790]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="HomeButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="0" unique_id=381451555]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/HomeButton" index="0" unique_id=645450898]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/HomeButton/VBoxContainer" index="0" unique_id=1820551315]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_home")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/HomeButton/VBoxContainer" index="1" unique_id=482760862]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Home"
+horizontal_alignment = 1
+
+[node name="WagesButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="1" unique_id=211438108]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/WagesButton" index="0" unique_id=1362294744]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/WagesButton/VBoxContainer" index="0" unique_id=169699699]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_payments")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/WagesButton/VBoxContainer" index="1" unique_id=1414316194]
+layout_mode = 2
+text = "Wages"
+horizontal_alignment = 1
+
+[node name="SalaryButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="2" unique_id=75440050]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/SalaryButton" index="0" unique_id=800984314]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/SalaryButton/VBoxContainer" index="0" unique_id=1898104044]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_analytics")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/SalaryButton/VBoxContainer" index="1" unique_id=1893014790]
+layout_mode = 2
+text = "Salary"
+horizontal_alignment = 1

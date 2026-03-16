@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://c8xm4k2qqanwr"]
+
+[ext_resource type="PackedScene" uid="uid://cae2j4owaaexq" path="res://templates/base_screen_template/base_screen_template.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://c1fcxbsnt8hb0" path="res://screens/settings/settings_screen_manager.gd" id="2_script"]
+[ext_resource type="Texture2D" uid="uid://dt3aikah78igf" path="res://assets/icons/home.svg" id="3_home"]
+[ext_resource type="Texture2D" uid="uid://7ndwsvonnbje" path="res://assets/icons/payments.svg" id="4_payments"]
+[ext_resource type="Texture2D" uid="uid://ccta4vu3kwduh" path="res://assets/icons/analytics.svg" id="5_analytics"]
+
+[node name="SettingsScreen" unique_id=834491522 instance=ExtResource("1_base")]
+script = ExtResource("2_script")
+
+[node name="TitleLabel" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="1" unique_id=246013616]
+unique_name_in_owner = true
+text = "Settings"
+
+[node name="SettingsContainer" type="VBoxContainer" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="2" unique_id=1683181307]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.8
+offset_left = 19.999998
+offset_top = 39.999985
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+theme_override_constants/separation = 12
+
+[node name="LanguageButton" type="Button" parent="BackgroundPanel/UIContainer/SettingsContainer" index="0" unique_id=568712799]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_type_variation = &"UI_ListButton"
+text = "Language"
+
+[node name="ThemeRow" type="HBoxContainer" parent="BackgroundPanel/UIContainer/SettingsContainer" index="1" unique_id=-1356491684]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ThemeLabel" type="Label" parent="BackgroundPanel/UIContainer/SettingsContainer/ThemeRow" index="0" unique_id=-447406062]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"UI_ListButton_Text_Small"
+text = "Theme"
+
+[node name="ThemeOptionButton" type="OptionButton" parent="BackgroundPanel/UIContainer/SettingsContainer/ThemeRow" index="1" unique_id=663705049]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_OptionButton"
+
+[node name="GoBackButton" type="Button" parent="BackgroundPanel/UIContainer" parent_id_path=PackedInt32Array(1692627922) index="3" unique_id=2102648744]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.775
+anchor_right = 0.7
+anchor_bottom = 0.86
+theme_type_variation = &"UI_FilledButton"
+text = "Go back"
+
+[node name="HomeButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="0" unique_id=264251875]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/HomeButton" index="0" unique_id=1470973760]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/HomeButton/VBoxContainer" index="0" unique_id=1831162012]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_home")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/HomeButton/VBoxContainer" index="1" unique_id=1983139453]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Home"
+horizontal_alignment = 1
+
+[node name="WagesButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="1" unique_id=1227646087]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/WagesButton" index="0" unique_id=1782517778]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/WagesButton/VBoxContainer" index="0" unique_id=1281460581]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_payments")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/WagesButton/VBoxContainer" index="1" unique_id=1725818840]
+layout_mode = 2
+text = "Wages"
+horizontal_alignment = 1
+
+[node name="SalaryButton" type="Button" parent="NavigationBarContainer/UIContainer" parent_id_path=PackedInt32Array(1459262737) index="2" unique_id=1537075288]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"UI_TransparentButton"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationBarContainer/UIContainer/SalaryButton" index="0" unique_id=1886930593]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="TextureRect" type="TextureRect" parent="NavigationBarContainer/UIContainer/SalaryButton/VBoxContainer" index="0" unique_id=1685396262]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_analytics")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NavigationBarContainer/UIContainer/SalaryButton/VBoxContainer" index="1" unique_id=2033126625]
+layout_mode = 2
+text = "Salary"
+horizontal_alignment = 1

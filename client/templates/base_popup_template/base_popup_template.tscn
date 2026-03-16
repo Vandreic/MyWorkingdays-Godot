@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://n0hnyjxf3qvj"]
+
+[ext_resource type="Theme" uid="uid://di2vbg26pjohw" path="res://assets/themes/light_theme.tres" id="1_snfg2"]
+[ext_resource type="Script" uid="uid://nlwilsrpxjvf" path="res://templates/base_popup_template/base_popup_template_manager.gd" id="2_mnnqv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jd866"]
+bg_color = Color(0.73333335, 0.8901961, 0.9019608, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="BasePopupTemplate" type="PopupPanel" unique_id=362013060]
+oversampling_override = 1.0
+position = Vector2i(210, 300)
+size = Vector2i(300, 200)
+visible = true
+theme = ExtResource("1_snfg2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_jd866")
+script = ExtResource("2_mnnqv")
+
+[node name="BackgroundPanel" type="Panel" parent="." unique_id=509761634]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_snfg2")
+theme_type_variation = &"UI_Primary_Container"
+
+[node name="ContentContainer" type="Control" parent="BackgroundPanel" unique_id=1516561918]
+layout_mode = 1
+anchor_left = 0.03
+anchor_top = 0.04
+anchor_right = 0.97
+anchor_bottom = 0.985

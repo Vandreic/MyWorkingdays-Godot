@@ -1,0 +1,43 @@
+# Godot-specific ignores
+*.import
+*.tmp
+export.cfg
+export_presets.cfg
+*.uid
+client/.godot/
+# Godot extentions
+client/addons/
+client/project_time_traker.json
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+.DS_Store
+android/
+
+# Ignore Visual Studio Code
+.vscode/*
+client/.vscode/*
+server/.vscode/*
+# Keep launch.json (client)
+!client/.vscode/launch.json
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+*.egg
+.Python
+
+# Environments
+.env

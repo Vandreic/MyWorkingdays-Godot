@@ -1,0 +1,71 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="My Workdays"
+config/version="1.0.0"
+run/main_scene="uid://yjibah38p20y"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="uid://bmsph04h3lg3e"
+config/windows_native_icon="res://assets/app_icon/windows_icon.ico"
+
+[autoload]
+
+APIManager="*res://autoload/api_manager.gd"
+ScreenManager="*res://autoload/screen_manager.gd"
+SaveData="*res://autoload/save_data.gd"
+ThemeManager="*res://autoload/theme_manager.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/project-time-tracker/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "yellow",
+"res://autoload/": "purple",
+"res://components/": "green",
+"res://screens/": "blue",
+"res://templates/": "teal",
+"res://utilities/": "pink"
+}
+
+[gui]
+
+theme/custom="uid://di2vbg26pjohw"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/localization/translations.da.translation", "res://assets/localization/translations.en.translation")
+locale/locale_filter_mode=0
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
